@@ -58,7 +58,7 @@ class ProcessForm extends Component {
     }
 
     getUsers() {
-        new Http().get('/user/profile/5').send((res) => {
+        new Http().get('/user/profile/6').send((res) => {
             this.setState({
                 usersOptions: res.data
             });

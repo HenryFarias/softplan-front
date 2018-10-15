@@ -13,7 +13,7 @@ class Navbar extends Component {
                                 <div className="account-wrap">
                                     <div className="account-item clearfix js-item-menu">
                                         <div className="content">
-                                            {getUserLogged().name} &nbsp; &nbsp;
+                                            {getUserLogged() && getUserLogged().name} &nbsp; &nbsp;
                                             <span className="fa fa-power-off" style={{ cursor: 'pointer' }} onClick={destroyAuth} />
                                         </div>
                                     </div>

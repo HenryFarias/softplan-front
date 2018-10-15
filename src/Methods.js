@@ -41,7 +41,6 @@ export function hasPermission(roles) {
 
 export function destroyAuth() {
     localStorage.clear();
-    window.location.href = '/'
 }
 
 export function getUrl() {

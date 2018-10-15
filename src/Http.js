@@ -50,12 +50,12 @@ class Http {
     }
 
     catchMessage(res) {
+        console.log(res);
         if (res) {
-            if (res.status === 401) {
-                destroyAuth();
-                messageAlert(res.data, 'error', '/login')
+            if (res.status === 401 || res.status === 403) {
+                messageAlert("Acesso negado!", 'error', '/login')
             } else {
-                messageAlert(res.data, 'error')
+                messageAlert(res.data.message, 'error')
             }
         }
     }
